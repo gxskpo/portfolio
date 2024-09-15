@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "@unocss/cli": "^0.62.3",
+    "tailwindcss": "^3.4.10",
+    "unocss": "^0.62.3"
+  }
+}
