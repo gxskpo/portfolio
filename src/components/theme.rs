@@ -35,7 +35,7 @@ pub fn ThemeButton() -> impl IntoView {
         let prefered_mode = get_mode();
         let mode = match prefered_mode.as_string() {
             Some(mode) => mode,
-            None => "light".to_string(),
+            None => "dark".to_string(),
         };
 
         let value = mode.as_str() == "dark";
