@@ -1,3 +1,3 @@
 use crate::utils::import;
 
-import!(skill, project, theme);
+import!(showcase, skill, project, theme);

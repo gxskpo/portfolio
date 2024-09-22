@@ -33,7 +33,7 @@ fn App() -> impl IntoView {
                             height="80"
                         />
                         <div class="details">
-                            <h1>Haruka</h1>
+                            <h1>Larissa</h1>
                             <p>16yo backend dev</p>
                         </div>
                     </span>
@@ -109,11 +109,7 @@ fn App() -> impl IntoView {
                     </div>
                 </div>
             </section>
-            <section class="projectSection">
-                <h2 class="projectsTitle">My projects</h2>
-                <div class="projectsContainer">
-                </div>
-            </section>
+            <components::Showcase />
         </main>
     }
 }
