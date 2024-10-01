@@ -38,7 +38,7 @@ fn App() -> impl IntoView {
                         </div>
                     </span>
                     <div class="socialButtons">
-                        <a>
+                        <a href="https://paypal.me/gxskpo" target="_blank" aria-label="Paypal">
                             <icons::Paypal />
                         </a>
                         <a href="mailto:hello@hawruka.de" target="_blank">
