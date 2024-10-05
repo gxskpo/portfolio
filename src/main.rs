@@ -48,14 +48,18 @@ fn App() -> impl IntoView {
                             <icons::Github />
                         </a>
                         <a
-                            href="https://discordapp.com/users/1009516529395695777"
+                            href="https://discordapp.com/users/538821983606145044"
                             target="_blank"
                             aria-label="discord"
                         >
                             <icons::Discord color=Some("var(--text)") />
                         </a>
-                        <a href="https://twitter.com/gxskpo" target="_blank" aria-label="twitter">
-                            <icons::Twitter />
+                        <a
+                            href="https://t.me/hawruka_de"
+                            target="_blank"
+                            aria-label="twitter"
+                        >
+                            <icons::Telegram />
                         </a>
                     </div>
                 </div>
