@@ -58,6 +58,15 @@ pub fn Showcase() -> impl IntoView {
                     <icons::CSharp />
                     <icons::Rust />
                 </Project>
+                <Project
+                    author=Some("RustLangES")
+                    name="Resume"
+                    description="Redesign of RustLangES webpage, built with Astro & tailwindcss"
+                    url="https://github.com/RustLangES/resume"
+                    icon_url="https://avatars.githubusercontent.com/u/74681819?"
+                >
+                    <icons::Astro />
+                </Project>
 
             </Page>
         </section>
