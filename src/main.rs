@@ -6,34 +6,40 @@ mod utils;
 
 use leptos::{component, view, IntoView};
 
+#[allow(dead_code)]
+const AVATAR: &'static str = "https://avatars.githubusercontent.com/u/97119998";
+
 #[component]
 fn App() -> impl IntoView {
     view! {
         <main class="indexLayout">
             <section class="topbar">
-                <button class="active">
-                    <icons::Home />
-                </button>
-                <a
-                    href="https://github.com/gxskpo/portfolio"
-                    target="_blank"
-                    aria-label="Source code"
-                >
-                    <icons::Code />
-                </a>
-                <components::ThemeButton />
+                <div class="pill">
+                    <button class="topbarButton active">
+                        <icons::Home />
+                    </button>
+                    <a
+                        href="https://github.com/gxskpo/portfolio"
+                        target="_blank"
+                        aria-label="Source code"
+                        class="topbarButton"
+                    >
+                        <icons::Code />
+                    </a>
+                    <components::ThemeButton />
+                </div>
             </section>
             <section class="info">
                 <div class="aboutMe">
                     <span class="avatar">
                         <img
                             alt="avatar"
-                            src="https://avatars.githubusercontent.com/u/97119998"
+                            src="https://hwrk.lol/jotchua/peruano.png"
                             width="80"
                             height="80"
                         />
                         <div class="details">
-                            <h1>Larissa</h1>
+                            <h1>Text</h1>
                             <p>16yo backend dev</p>
                         </div>
                     </span>
@@ -54,11 +60,7 @@ fn App() -> impl IntoView {
                         >
                             <icons::Discord color=Some("var(--text)") />
                         </a>
-                        <a
-                            href="https://t.me/hawruka_de"
-                            target="_blank"
-                            aria-label="twitter"
-                        >
+                        <a href="https://t.me/hawruka_de" target="_blank" aria-label="twitter">
                             <icons::Telegram />
                         </a>
                     </div>
@@ -85,8 +87,6 @@ fn App() -> impl IntoView {
                         <components::Skill name="Python">
                             <icons::Python />
                         </components::Skill>
-                        <span style="background: transparent;"></span>
-
                         <components::Skill name="React">
                             <icons::React />
                         </components::Skill>

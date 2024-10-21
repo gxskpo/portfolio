@@ -15,7 +15,6 @@
 
   /* Shadows */
   --shadow0: inset 5px 5px 10px #cbcdd0, inset -5px -5px 10px #ffffff;
-  --shadow00: inset 5px 5px 10px #b6b6b8, inset -5px -5px 10px #ededed;
   --shadow1: 5px 5px 10px #cbcdd0, -5px -5px 10px #ffffff;
   --hshadow1: 10px 10px 20px #cbcdd0, -10px -10px 20px #ffffff;
 
@@ -33,7 +32,9 @@ body.dark {
   /* Catppuccin latte colorscheme */
 
   /* Main colors */
-  --background: #1e1e2e;
+
+  --background: #2c3135;
+  /* --background: #1e1e2e; */
   --text: #cdd6f4;
   --subtext0: #a6adc8;
   --subtext1: #bac2de;
@@ -41,9 +42,12 @@ body.dark {
   --surface1: #45475a;
 
   /* Shadows */
-  --shadow0: inset 5px 5px 10px #181825, inset -5px -5px 10px #242437;
-  --shadow00: inset 5px 5px 10px #15151c, inset -5px -5px 10px #1f1f2a;
-  --shadow1: 5px 5px 10px #181825, -5px -5px 10px #242437;
+  --shadow0: inset 5px 5px 10px #25282d, inset -5px -5px 10px #3f444a;
+  --shadow00: inset 10px 10px 10px #25282d, inset -10px -10px 10px #3f444a;
+
+  --shadow1: inset -5px -5px 10px #25282d, inset 3px 3px 10px #3f444a;
+  --shadow1-sm: inset -5px -5px 5px #25282d, inset -2px -2px 5px #43474d;
+
   --hshadow1: 10px 10px 20px #181825, -10px -10px 20px #242437;
 
   /* Extra colors */
@@ -66,9 +70,8 @@ body {
 }
 
 .indexLayout {
-  @apply grid;
+  @apply grid max-w-7xl;
   grid-template-columns: 1.2fr 2fr;
-  grid-template-rows: 0.5fr 4fr;
 }
 
 .indexLayout > * {
@@ -76,37 +79,45 @@ body {
 }
 
 .indexLayout > section {
-  @apply p-2 m-1 rounded-2xl;
-  box-shadow: var(--shadow0);
+  @apply flex p-2;
+  /* box-shadow: var(--shadow0); */
   background-color: var(--background);
 }
 
 .topbar {
-  display: none;
-  @apply col-span-2 row-span-1 flex flex-row items-end justify-end p-2;
+  @apply col-span-2 flex flex-row w-full justify-end items-end;
 }
 
-.topbar > button,
-.topbar > a,
-.topbarButton {
-  @apply p-2 size-10 rounded-xl m-1 duration-200 flex flex-col align-middle justify-center items-center;
+.pill {
+  @apply flex flex-row p-2 rounded-full;
   box-shadow: var(--shadow1);
 }
 
-.topbar > button:hover,
-.topbar > a:hover {
+.pill > button,
+.pill > a,
+.topbarButton {
+  @apply p-2 size-10 rounded-full duration-200 flex flex-col align-middle justify-center items-center;
+}
+
+.pill > button:hover,
+.pill > a:hover {
   @apply duration-200;
-  box-shadow: var(--hshadow1);
+  box-shadow: var(--shadow0);
 }
 
 .active {
   border: 2px solid var(--surface0);
+  box-shadow: var(--shadow0);
+}
+
+.info {
+  @apply flex flex-col gap-4 h-full;
 }
 
 .aboutMe {
-  @apply rounded-2xl p-2;
+  @apply rounded-3xl p-2;
   background: var(--background);
-  box-shadow: var(--shadow00);
+  box-shadow: var(--shadow1);
 }
 
 .avatar {
@@ -118,7 +129,7 @@ body {
 }
 
 .details {
-  @apply ml-2 text-center;
+  @apply ml-2 text-left;
 }
 
 .details > h1 {
@@ -136,22 +147,22 @@ body {
 }
 
 .socialButtons > a {
-  @apply inline-block text-2xl rounded-xl p-2 ml-2 mr-2 duration-150;
+  @apply inline-block text-2xl rounded-full p-2 ml-2 mr-2 duration-150;
   background-color: var(--background);
-  box-shadow: var(--shadow1);
+  box-shadow: var(--shadow0);
 }
 
 .socialButtons > a:hover {
-  box-shadow: var(--hshadow1);
-}
-
-.description {
-  @apply rounded-2xl p-7 mt-1.5;
   box-shadow: var(--shadow00);
 }
 
+.description {
+  @apply rounded-3xl p-7 mt-1.5;
+  box-shadow: var(--shadow1);
+}
+
 .description > h2 {
-  @apply text-center font-semibold;
+  @apply text-left font-semibold;
 }
 
 .description > p {
@@ -159,23 +170,22 @@ body {
 }
 
 .skills {
-  @apply rounded-2xl p-2 py-3.5 mt-1.5 flex flex-col items-center justify-center;
+  @apply rounded-3xl p-4 py-3.5 mt-1.5 flex flex-col justify-center;
   background: var(--background);
-  box-shadow: var(--shadow00);
+  box-shadow: var(--shadow1);
 }
 
 .skills > h3 {
-  @apply text-lg text-center font-semibold;
+  @apply text-lg text-left font-semibold ml-2;
 }
 
 .skillsIcons {
-  @apply grid grid-cols-5 gap-3 mt-2;
+  @apply grid grid-cols-7 gap-3 mt-2;
 }
 
 .skillIcon {
   @apply rounded-xl p-2 relative flex flex-col items-center;
   background-color: var(--background);
-  box-shadow: var(--shadow1);
 }
 
 .group:hover .skillTooltip {
@@ -187,12 +197,16 @@ body {
   background-color: var(--surface0);
 }
 
+.projectSection {
+  @apply flex flex-col;
+}
+
 .projectSectionSelector {
-  @apply flex flex-row gap-4 justify-center items-center p-3 rounded-xl;
-  box-shadow: var(--shadow0);
+  @apply relative flex flex-row gap-4 justify-center items-center p-3 rounded-full;
+  box-shadow: var(--shadow1);
 }
 .projectSectionSelector > button {
-  @apply p-2 rounded-lg;
+  @apply p-2 rounded-full w-[50%];
   --btn-shadow: none;
   box-shadow: var(--btn-shadow);
   transition-duration: 0.2s;
@@ -206,23 +220,29 @@ body {
 }
 
 .projectsTitle {
-  @apply text-center text-2xl font-semibold;
+  @apply text-center text-lg;
 }
 
 .projectsContainer {
-  @apply grid-cols-2 p-1 mt-1.5 gap-4 hidden;
+  @apply relative grid-cols-2 p-4 mt-1.5 gap-4 hidden rounded-3xl h-full;
+  box-shadow: var(--shadow1);
 }
+
+.projectsContainer > p {
+  @apply flex flex-col col-span-2 row-span-2 justify-center items-center;
+}
+
 .activePage {
   display: grid;
 }
 
 .project {
   @apply rounded-xl p-2 duration-200;
-  box-shadow: var(--shadow1);
+  box-shadow: var(--shadow1-sm);
 }
 
 .project:hover {
-  box-shadow: var(--hshadow1);
+  box-shadow: var(--shadow1);
 }
 
 .projectInfo {
@@ -261,10 +281,6 @@ body {
     grid-template-rows: 0.2fr 2fr 3fr;
   }
 
-  .projectSection {
-    height: auto !important;
-  }
-
   .topbar {
     @apply col-span-1 row-span-1;
   }
@@ -280,13 +296,13 @@ body {
 
 @media only screen and (max-width: 1000px) {
   .socialButtons > a {
-    @apply inline-block text-2xl rounded-xl p-1.5 mx-2 duration-150;
+    @apply inline-block text-2xl  p-1.5 mx-2 duration-150;
     background-color: var(--background);
     box-shadow: var(--shadow1);
   }
 
   .projectsContainer {
-    @apply grid-cols-1 p-2;
+    @apply grid-cols-1 p-3.5 min-h-[20vh];
   }
 }
 

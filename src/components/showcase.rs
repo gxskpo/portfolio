@@ -44,7 +44,7 @@ pub fn Showcase() -> impl IntoView {
                 </button>
             </div>
             <Page no=1 active_page=page>
-                "Nothing to see here yet."
+                <p>"Nothing to see here yet."</p>
             </Page>
             <Page no=2 active_page=page>
                 <Project
@@ -61,7 +61,7 @@ pub fn Showcase() -> impl IntoView {
                 <Project
                     author=Some("RustLangES")
                     name="Resume"
-                    description="Redesign of RustLangES webpage, built with Astro & tailwindcss"
+                    description="RustLangES web redesign, built with Astro and tailwind"
                     url="https://github.com/RustLangES/resume"
                     icon_url="https://avatars.githubusercontent.com/u/74681819?"
                 >
