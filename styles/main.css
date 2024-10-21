@@ -178,24 +178,21 @@ body {
   box-shadow: var(--shadow1);
 }
 
+.group:hover .skillTooltip {
+  @apply block;
+}
+
 .skillTooltip {
   @apply absolute -top-8 text-center bg-opacity-100 hidden rounded-md p-1 mb-4;
   background-color: var(--surface0);
 }
 
 .projectSectionSelector {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0.75rem;
-  padding: 0.7rem;
+  @apply flex flex-row gap-4 justify-center items-center p-3 rounded-xl;
   box-shadow: var(--shadow0);
 }
 .projectSectionSelector > button {
-  padding: 0.45rem;
-  border-radius: 0.5rem;
+  @apply p-2 rounded-lg;
   --btn-shadow: none;
   box-shadow: var(--btn-shadow);
   transition-duration: 0.2s;
