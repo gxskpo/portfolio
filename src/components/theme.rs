@@ -33,6 +33,7 @@ pub fn ThemeButton() -> impl IntoView {
 
     create_effect(move |_| {
         let prefered_mode = get_mode();
+
         let mode = match prefered_mode.as_string() {
             Some(mode) => mode,
             None => "dark".to_string(),
