@@ -34,12 +34,12 @@ fn App() -> impl IntoView {
                     <span class="avatar">
                         <img
                             alt="avatar"
-                            src="https://hwrk.lol/jotchua/peruano.png"
+                            src={AVATAR}
                             width="80"
                             height="80"
                         />
                         <div class="details">
-                            <h1>Text</h1>
+                            <h1>Larissa</h1>
                             <p>16yo backend dev</p>
                         </div>
                     </span>
