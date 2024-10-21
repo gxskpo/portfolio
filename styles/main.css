@@ -15,8 +15,9 @@
 
   /* Shadows */
   --shadow0: inset 5px 5px 10px #cbcdd0, inset -5px -5px 10px #ffffff;
-  --shadow1: 5px 5px 10px #cbcdd0, -5px -5px 10px #ffffff;
-  --hshadow1: 10px 10px 20px #cbcdd0, -10px -10px 20px #ffffff;
+  --shadow00: inset 10px 10px 10px #cbcdd0, inset -10px -10px 10px #ffffff;
+  --shadow1: inset -5px -5px 10px #cbcdd0, inset 3px 3px 10px #ffffff;
+  --shadow1-sm: inset -5px -5px 5px #cbcdd0, inset -2px -2px 5px #e3e3e3;
 
   /* Extra colors */
   --yellow: #f5df1b;
@@ -44,11 +45,8 @@ body.dark {
   /* Shadows */
   --shadow0: inset 5px 5px 10px #25282d, inset -5px -5px 10px #3f444a;
   --shadow00: inset 10px 10px 10px #25282d, inset -10px -10px 10px #3f444a;
-
   --shadow1: inset -5px -5px 10px #25282d, inset 3px 3px 10px #3f444a;
   --shadow1-sm: inset -5px -5px 5px #25282d, inset -2px -2px 5px #43474d;
-
-  --hshadow1: 10px 10px 20px #181825, -10px -10px 20px #242437;
 
   /* Extra colors */
   --yellow: #f9e2af;
@@ -238,11 +236,11 @@ body {
 
 .project {
   @apply rounded-xl p-2 duration-200;
-  box-shadow: var(--shadow1-sm);
+  box-shadow: var(--shadow0);
 }
 
 .project:hover {
-  box-shadow: var(--shadow1);
+  box-shadow: var(--shadow00);
 }
 
 .projectInfo {
