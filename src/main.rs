@@ -40,7 +40,7 @@ fn App() -> impl IntoView {
                         />
                         <div class="details">
                             <h1>Larissa</h1>
-                            <p>16yo backend dev</p>
+                            <p>17yo backend dev</p>
                         </div>
                     </span>
                     <div class="socialButtons">
@@ -68,7 +68,7 @@ fn App() -> impl IntoView {
                 <div class="description">
                     <h2>About me</h2>
                     <p>
-                        "Hi! my name is Larissa, online I go by Haruka, I'm a 16yo mexican
+                        "Hi! my name is Larissa, online I go by Haruka, I'm a 17yo mexican
                         girl who likes programming and web backend development."
                     </p>
                 </div>
