@@ -7,7 +7,7 @@ mod utils;
 use leptos::{component, view, IntoView};
 
 #[allow(dead_code)]
-const AVATAR: &'static str = "https://avatars.githubusercontent.com/u/97119998";
+const AVATAR: &str = "https://avatars.githubusercontent.com/u/97119998";
 
 #[component]
 fn App() -> impl IntoView {

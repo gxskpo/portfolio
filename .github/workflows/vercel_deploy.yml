@@ -29,9 +29,6 @@ jobs:
       - name: Build
         run: ./trunk build --release
 
-      - name: Install Vercel CLI
-        run: npm i -g vercel@latest 
-
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
