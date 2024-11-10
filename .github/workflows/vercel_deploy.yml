@@ -4,9 +4,8 @@ on:
     branches:
       - main
 env:
+  PROJECT_NAME: "portfolio"
   CARGO_TERM_COLOR: always
-  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 jobs:
   DEPLOY:
     runs-on: ubuntu-latest
@@ -31,14 +30,11 @@ jobs:
         run: ./trunk build --release
 
       - name: Install Vercel CLI
-        run: npm i -g vercel@latest
-
-      - name: Pull vercel info
-        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+        run: npm i -g vercel@latest 
 
       - name: Deploy
-        id: deployment
-        working-directory: ./dist
-        run: |
-          vercel deploy --prod --token=${{ secrets.VERCEL_TOKEN }} >> $GITHUB_STEP_SUMMARY
-          echo $GITHUB_STEP_SUMMARY
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages publish dist/ --project-name "${{ env.PROJECT_NAME }}"
