@@ -34,8 +34,8 @@ body.dark {
 
   /* Main colors */
 
-  --background: #2c3135;
-  /* --background: #1e1e2e; */
+  --background: #1e1e2e;
+  --mantle: #181825;
   --text: #cdd6f4;
   --subtext0: #a6adc8;
   --subtext1: #bac2de;
@@ -43,10 +43,14 @@ body.dark {
   --surface1: #45475a;
 
   /* Shadows */
-  --shadow0: inset 5px 5px 10px #25282d, inset -5px -5px 10px #3f444a;
-  --shadow00: inset 10px 10px 10px #25282d, inset -10px -10px 10px #3f444a;
-  --shadow1: inset -5px -5px 10px #25282d, inset 3px 3px 10px #3f444a;
-  --shadow1-sm: inset -5px -5px 5px #25282d, inset -2px -2px 5px #43474d;
+  --shadow0: inset 5px 5px 10px var(--mantle),
+    inset -5px -5px 10px var(--surface0);
+  --shadow00: inset 10px 10px 10px var(--mantle),
+    inset -10px -10px 10px var(--surface0);
+  --shadow1: inset -5px -5px 10px var(--mantle),
+    inset 3px 3px 10px var(--surface0);
+  --shadow1-sm: inset -5px -5px 5px var(--mantle),
+    inset -2px -2px 5px var(--surface0);
 
   /* Extra colors */
   --yellow: #f9e2af;
