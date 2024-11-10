@@ -21,8 +21,8 @@ pub fn Project(
     };
 
     view! {
-        <a href=url target="_blank">
-            <article class="project">
+        <a href=url target="_blank" class="project">
+            <article class="">
                 <span class="projectInfo">
                     <img src=icon_url alt="Project Icon" />
                     <span class="projectText">

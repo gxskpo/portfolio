@@ -67,7 +67,6 @@ pub fn Showcase() -> impl IntoView {
                 >
                     <icons::Astro />
                 </Project>
-
             </Page>
         </section>
     }
