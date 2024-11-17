@@ -91,7 +91,7 @@ body {
 }
 
 .pill {
-  @apply flex flex-row p-2 rounded-full;
+  @apply flex flex-row p-2 rounded-full gap-1;
   box-shadow: var(--shadow1);
 }
 
