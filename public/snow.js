@@ -1,7 +1,14 @@
+window.snowEnabled = false;
+
 window.onload = function createSnowEffect() {
+  window.snowEnabled = true;
   const indexLayout = document.querySelector("body");
 
   function createSnowflake() {
+    if (!window.snowEnabled) {
+      return 0;
+    }
+
     const snowflake = document.createElement("div");
     snowflake.textContent = "❄";
     Object.assign(snowflake.style, {

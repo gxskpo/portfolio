@@ -27,17 +27,13 @@ fn App() -> impl IntoView {
                         <icons::Code />
                     </a>
                     <components::ThemeButton />
+                    <components::SnowToggle />
                 </div>
             </section>
             <section class="info">
                 <div class="aboutMe">
                     <span class="avatar">
-                        <img
-                            alt="avatar"
-                            src={AVATAR}
-                            width="80"
-                            height="80"
-                        />
+                        <img alt="avatar" src=AVATAR width="80" height="80" />
                         <div class="details">
                             <h1>Larissa</h1>
                             <p>17yo backend dev</p>
