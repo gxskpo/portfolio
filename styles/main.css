@@ -67,9 +67,8 @@ body.dark {
 }
 
 body {
-  @apply p-1.5 flex flex-col items-center justify-center;
+  @apply p-1.5 flex flex-col items-center justify-center md:overflow-y-hidden;
   background-color: var(--background);
-  overflow-y: hidden;
 }
 
 .indexLayout {
