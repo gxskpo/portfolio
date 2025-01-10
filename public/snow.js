@@ -1,6 +1,8 @@
 window.snowEnabled = false;
 
-window.onload = function createSnowEffect() {
+window.onload = () => {};
+
+function createSnowEffect() {
   window.snowEnabled = true;
   const indexLayout = document.querySelector("body");
 
@@ -43,4 +45,4 @@ window.onload = function createSnowEffect() {
   document.head.appendChild(style);
 
   setInterval(createSnowflake, 200);
-};
+}
