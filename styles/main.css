@@ -301,7 +301,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
   .socialButtons > a {
     @apply inline-block text-2xl  p-1.5 mx-2 duration-150;
     background-color: var(--background);
