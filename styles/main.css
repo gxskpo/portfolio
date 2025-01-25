@@ -230,7 +230,7 @@ body {
 }
 
 .projectsContainer {
-  @apply relative grid-cols-2 p-4 mt-1.5 gap-4 hidden rounded-3xl h-[31rem];
+  @apply relative grid-cols-2 p-4 mt-1.5 gap-4 hidden rounded-3xl md:h-[31rem];
   overflow-y: scroll;
   box-shadow: var(--shadow1);
 }
