@@ -71,6 +71,9 @@ fn App() -> impl IntoView {
                 <div class="skills">
                     <h3>Skills</h3>
                     <div class="skillsIcons">
+                        <components::Skill name="Rust">
+                            <icons::Rust />
+                        </components::Skill>
                         <components::Skill name="C#">
                             <icons::CSharp />
                         </components::Skill>
