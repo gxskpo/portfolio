@@ -1,5 +1,6 @@
 use crate::components::Project;
 use crate::icons;
+use crate::icons::{Briefcase, FileCode, PullRequest};
 use leptos::{component, create_memo, create_signal, view, Children, IntoView, ReadSignal};
 
 #[component]
@@ -32,7 +33,10 @@ pub fn Showcase() -> impl IntoView {
                     }
                     on:click=move |_| set_page(1)
                 >
-                    My projects
+                    <span class="flex flex-row justify-center items-center gap-1">
+                        <FileCode />
+                        Projects
+                    </span>
                 </button>
                 <button
                     class=move || {
@@ -40,7 +44,21 @@ pub fn Showcase() -> impl IntoView {
                     }
                     on:click=move |_| set_page(2)
                 >
-                    Contributions
+                    <span class="flex flex-row justify-center items-center gap-1">
+                        <PullRequest />
+                        Contributions
+                    </span>
+                </button>
+                <button
+                    class=move || {
+                        if page() == 3 { "projectsTitle active" } else { "projectsTitle" }
+                    }
+                    on:click=move |_| set_page(3)
+                >
+                    <span class="flex flex-row justify-center items-center gap-1">
+                        <Briefcase />
+                        Work
+                    </span>
                 </button>
             </div>
             <Page no=1 active_page=page>
@@ -67,6 +85,22 @@ pub fn Showcase() -> impl IntoView {
                 >
                     <icons::Astro />
                 </Project>
+            </Page>
+            <Page no=3 active_page=page>
+                <article class="project">
+                    <span class="projectInfo">
+                        <span class="projectText">
+                            <h3>Guia Vegana</h3>
+                            <p>Backend Developer</p>
+                            <p>2025</p>
+                        </span>
+                    </span>
+                    <div class="projectIcons">
+                        <div class="projectIcon">
+                            <icons::Rust />
+                        </div>
+                    </div>
+                </article>
             </Page>
         </section>
     }

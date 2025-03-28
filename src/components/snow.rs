@@ -47,12 +47,10 @@ pub fn SnowToggle() -> impl IntoView {
     });
 
     view! {
-        <button on:click=move|_| {
+        <button on:click=move |_| {
             let status = setSnowStatus(!getSnowStatus().as_bool().unwrap()).as_bool().expect(".");
             set_enabled(status);
             setItem("snow", format!("{}", status).as_str());
-        }>
-            {icon}
-        </button>
+        }>{icon}</button>
     }
 }

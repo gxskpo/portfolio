@@ -27,7 +27,7 @@ fn App() -> impl IntoView {
                         <icons::Code />
                     </a>
                     <components::ThemeButton />
-                    { /* <components::SnowToggle /> */ }
+                    {}
                 </div>
             </section>
             <section class="info">
