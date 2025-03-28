@@ -10,7 +10,6 @@ extern "C" {
     pub fn setSnowStatus(value: bool) -> JsValue;
 }
 
-#[wasm_bindgen]
 pub fn load_pref() -> bool {
     let snow_enabled = {
         let value = getItem("snow");

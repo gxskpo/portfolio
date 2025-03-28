@@ -1,16 +1,13 @@
 use crate::icons;
 use crate::utils::{getItem, setItem};
-use leptos::wasm_bindgen;
 use leptos::wasm_bindgen::prelude::*;
 use leptos::web_sys::window;
 use leptos::{component, create_effect, create_signal, view, IntoView};
 
-#[wasm_bindgen]
 pub fn update_local_storage(new_value: &str) {
     setItem("mode", new_value);
 }
 
-#[wasm_bindgen]
 pub fn get_mode() -> JsValue {
     getItem("mode")
 }
